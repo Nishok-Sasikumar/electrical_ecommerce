@@ -31,7 +31,8 @@ function Signup() {
     setIsLoading(true)
 
     try {
-      const response = await axios.post("http://127.0.0.1:5000/api/otp/send", { email })
+      const backendUrl = window.location.hostname === 'localhost' ? "http://localhost:5000" : window.location.origin;
+      const response = await axios.post(`${backendUrl}/api/otp/send`, { email })
       if (response.data.success) {
         setStep(2)
         setSuccess("OTP sent to your email. Please check your inbox.")
@@ -53,8 +54,9 @@ function Signup() {
     setIsLoading(true)
 
     try {
+      const backendUrl = window.location.hostname === 'localhost' ? "http://localhost:5000" : window.location.origin;
       // 1. Verify OTP with backend
-      const response = await axios.post("http://127.0.0.1:5000/api/otp/verify", { email, otp })
+      const response = await axios.post(`${backendUrl}/api/otp/verify`, { email, otp })
       
       if (response.data.success) {
         // 2. Proceed with actual registration in Firebase

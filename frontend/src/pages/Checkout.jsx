@@ -35,13 +35,14 @@ function Checkout() {
     setLoading(true)
     try {
       const totalAmount = cartTotal * 1.18; // Subtotal + 18% Tax
-      const backendUrl = "http://localhost:5000"; // Consistently use localhost
+      // In production, use current origin (for Vercel rewrites), in dev use localhost:5000
+      const backendUrl = window.location.hostname === 'localhost' ? "http://localhost:5000" : window.location.origin;
       
       // 0. Pre-check: Health Check (Ensure Backend is Reachable)
       try {
         await axios.get(`${backendUrl}/api/health`)
       } catch (healthErr) {
-        throw new Error("Backend server is not reachable at http://localhost:5000. Please ensure 'node server.js' is running.")
+        throw new Error(`Backend server is not reachable at ${backendUrl}. Please ensure the server is running.`)
       }
       
       // 1. Create Razorpay Order on Backend
