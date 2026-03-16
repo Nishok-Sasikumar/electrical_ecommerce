@@ -1,4 +1,6 @@
 {
+  "buildCommand": "npm run build",
+  "outputDirectory": "frontend/dist",
   "rewrites": [
     {
       "source": "/api/(.*)",
@@ -6,8 +8,7 @@
     },
     {
       "source": "/(.*)",
-      "destination": "/frontend/dist/$1",
-      "check": true
+      "destination": "/frontend/dist/$1"
     },
     {
       "source": "/(.*)",
