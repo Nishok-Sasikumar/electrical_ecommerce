@@ -36,7 +36,7 @@ function Checkout() {
     try {
       const totalAmount = cartTotal * 1.18; // Subtotal + 18% Tax
       // In production, use current origin (for Vercel rewrites), in dev use localhost:5000
-      const backendUrl = window.location.hostname === 'localhost' ? "http://localhost:5000" : window.location.origin;
+      const backendUrl = import.meta.env.VITE_BACKEND_URL || (window.location.hostname === 'localhost' ? "http://localhost:5000" : window.location.origin);
       
       // 0. Pre-check: Health Check (Ensure Backend is Reachable)
       try {

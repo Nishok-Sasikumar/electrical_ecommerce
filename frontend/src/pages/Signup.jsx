@@ -31,7 +31,7 @@ function Signup() {
     setIsLoading(true)
 
     try {
-      const backendUrl = window.location.hostname === 'localhost' ? "http://localhost:5000" : window.location.origin;
+      const backendUrl = import.meta.env.VITE_BACKEND_URL || (window.location.hostname === 'localhost' ? "http://localhost:5000" : window.location.origin);
       const response = await axios.post(`${backendUrl}/api/otp/send`, { email })
       if (response.data.success) {
         setStep(2)
@@ -54,7 +54,7 @@ function Signup() {
     setIsLoading(true)
 
     try {
-      const backendUrl = window.location.hostname === 'localhost' ? "http://localhost:5000" : window.location.origin;
+      const backendUrl = import.meta.env.VITE_BACKEND_URL || (window.location.hostname === 'localhost' ? "http://localhost:5000" : window.location.origin);
       // 1. Verify OTP with backend
       const response = await axios.post(`${backendUrl}/api/otp/verify`, { email, otp })
       
