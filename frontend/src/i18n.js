@@ -1,0 +1,382 @@
+import i18n from 'i18next';
+import { initReactI18next } from 'react-i18next';
+import LanguageDetector from 'i18next-browser-languagedetector';
+
+i18n
+  .use(LanguageDetector)
+  .use(initReactI18next)
+  .init({
+    fallbackLng: 'en',
+    debug: false,
+    interpolation: {
+      escapeValue: false,
+    },
+    resources: {
+      en: {
+        translation: {
+          nav: {
+            home: "Home",
+            catalog: "Catalog",
+            cart: "Cart"
+          },
+          hero: {
+            badge: "India's Trusted Electrical Partner",
+            title_part1: "Powering",
+            title_part2: "Modern India.",
+            desc: "Supplying premium electrical components and engineering solutions for over two decades. From domestic wiring to industrial automation.",
+            btn_explore: "Explore Inventory",
+            btn_support: "Expert Support",
+            happy_clients: "Happy Clients",
+            clients_desc: "Across South India"
+          },
+          home: {
+            departments: "Specialized",
+            departments_italic: "Departments.",
+            departments_desc: "Explore our focus areas where we deliver unmatched technical expertise.",
+            departments_gear: "Industrial Gear",
+            departments_lighting: "Smart Lighting",
+            departments_safety: "Safety Systems",
+            departments_cables: "High-Volt Cables",
+            view_all: "View All Categories",
+            quality_title: "Uncompromising",
+            quality_italic: "Quality Standards.",
+            quality_desc: "We understand that in electrical systems, there's no room for error. That's why we only trade in components that meet the highest global safety benchmarks.",
+            verify: "Verify Our Certifications",
+            discover_title: "Discover Our",
+            discover_italic: "Full Catalog.",
+            discover_desc: "Explore our complete range of high-performance electrical components, tools, and industrial equipment.",
+            trusted_by: "Trusted by Professionals"
+          },
+          contact: {
+            title: "Talk to the",
+            title_italic: "Experts.",
+            desc: "Custom requirements? Technical questions? Our engineers are just a message away.",
+            helpline: "Direct Helpline",
+            location: "Our Location",
+            enquiry_title: "Submit Enquiry.",
+            label_name: "Full Name",
+            placeholder_name: "Enter ur name",
+            label_phone: "Phone",
+            label_message: "Message",
+            placeholder_message: "How can we assist you today?",
+            btn_send: "Send Request",
+            proprietor: "Proprietor"
+          },
+          footer: {
+            tagline: "High-Performance Electricals.",
+            cat_lighting: "Lighting",
+            cat_switches: "Switches",
+            cat_industrial: "Industrial",
+            cat_appliances: "Appliances",
+            cat_wires: "Wires"
+          },
+          catalog: {
+            badge: "Full Inventory",
+            title: "Product",
+            title_italic: "Catalog.",
+            search_placeholder: "Find your part...",
+            no_results: "No matching components.",
+            no_results_desc: "Try broadening your search or switching categories.",
+            reset: "Reset Filters"
+          },
+          product: {
+            specs: "Technical Specifications",
+            btn_cart: "Add to System",
+            btn_ar: "View in 3D / AR Space",
+            authenticity: "Authenticity",
+            mfg: "Direct from MFG",
+            logistics: "Logistics",
+            shipping: "Global Shipping",
+            protection: "Protection",
+            warranty: "Full Warranty",
+            not_found: "Part Not Located.",
+            return: "Return to Catalog",
+            rating_label: "Industry Standard Gear",
+            flash_deal: "Flash Deal -20%",
+            description_fallback: "Designed for maximum electrical stability and durability. This industrial-grade component features advanced heat dissipation and a precision-engineered contact system for reliable power distribution."
+          },
+          cart: {
+            title: "Your",
+            title_italic: "Selection.",
+            title_desc: "Review your items before we finalize the logistics.",
+            empty: "Empty Inventory.",
+            empty_desc: "You haven't added any electrical components to your order yet.",
+            btn_explore: "Explore Products",
+            summary: "Summary.",
+            subtotal: "Subtotal",
+            delivery: "Delivery",
+            free: "FREE",
+            tax: "Tax (18%)",
+            total: "Total",
+            btn_checkout: "Finalize Order",
+            secure: "Secure Checkout Guaranteed",
+            quantity: "Quantity"
+          },
+          auth: {
+            login_title: "Welcome Back.",
+            login_subtitle: "Log in to your account to continue.",
+            signup_title: "Create Account.",
+            signup_subtitle: "Join us for a better shopping experience.",
+            label_email: "Email Address",
+            label_password: "Password",
+            label_name: "Full Name",
+            btn_login: "Log In",
+            btn_google: "Continue with Google",
+            btn_signup: "Create Account",
+            no_account: "Don't have an account?",
+            have_account: "Already have an account?",
+            link_signup: "Create an account",
+            link_login: "Log in to account",
+            error_login: "Login failed",
+            error_signup: "Registration failed",
+            verification_sent: "Verification email sent. Please check your inbox.",
+            verify_email: "Please verify your email to continue."
+          },
+          orders: {
+            title: "My",
+            title_italic: "Orders.",
+            subtitle: "Track your electrical component shipments and history.",
+            empty_title: "No Orders Yet.",
+            empty_desc: "You haven't placed any orders for electrical components yet.",
+            btn_start: "Start Shopping",
+            label_id: "Order ID",
+            label_date: "Placed On",
+            label_total: "Total Amount",
+            status_delivered: "Delivered",
+            status_transit: "In Transit",
+            btn_received: "Mark as Received"
+          },
+          seed: {
+            title: "Firestore Seeding.",
+            desc: "This will clear the current 'products' collection in Firestore and upload the industry-standard electrical component catalog.",
+            btn_seed: "Seed Products Collection",
+            btn_loading: "Uploading...",
+            btn_success: "Data Uploaded Successfully",
+            back: "Back to Catalog"
+          },
+          checkout: {
+            title: "Complete",
+            title_italic: "Checkout.",
+            form_desc: "Finalize your logistics and contact details.",
+            label_address: "Detailed Address",
+            placeholder_address: "Street, House No, Landmark...",
+            label_city: "City",
+            label_zip: "Zip Code",
+            btn_confirm: "Confirm Order",
+            success_title: "Order Dispatched.",
+            success_desc: "Your electrical components are being prepared for rapid fulfillment. You'll receive a tracking ID shortly.",
+            logistics_summary: "Logistics Summary",
+            priority_delivery: "Priority Delivery: 2-3 Days"
+          },
+          ar: {
+            loading: "Initializing 3D Space...",
+            exit: "Exit 3D View",
+            interactive: "Interactive 3D",
+            active: "AR Mode Active",
+            interaction: "Realistic 3D Interaction",
+            pending_title: "3D Model In Progress",
+            pending_desc: "We are currently digitizing this component for high-fidelity 3D viewing. Please check back soon.",
+            return: "Return to Marketplace",
+            powered_by: "Powered by",
+            view_in_space: "View in your space",
+            mobile_required: "Mobile Device Recommended for AR",
+            desktop_title: "Try on Mobile",
+            desktop_desc: "Scan this product on your phone for full AR floor detection and realistic placement.",
+            controls: "Placement",
+            scale: "Size",
+            rotate: "Rotation",
+            capture: "Capture View",
+            reset: "Reset",
+            drag_hint: "Drag to position model",
+            load_error: "Model Load Failed",
+            load_error_desc: "Unable to load 3D file. Ensure you have clicked 'Seed Products' to sync paths.",
+            retry: "Retry Load"
+          }
+        }
+      },
+      ta: {
+        translation: {
+          nav: {
+            home: "முகப்பு",
+            catalog: "பட்டியல்",
+            cart: "கூடை"
+          },
+          hero: {
+            badge: "இந்தியாவின் நம்பகமான மின்சார பங்குதாரர்",
+            title_part1: "சக்திவாய்ந்த",
+            title_part2: "நவீன இந்தியா.",
+            desc: "இரண்டு தசாப்தங்களுக்கும் மேலாக பிரீமியம் மின் கூறுகள் மற்றும் பொறியியல் தீர்வுகளை வழங்குகிறோம். வீட்டு வயரிங் முதல் தொழில்துறை ஆட்டோமேஷன் வரை.",
+            btn_explore: "பட்டியலை ஆராயுங்கள்",
+            btn_support: "நிபுணர் ஆதரவு",
+            happy_clients: "மகிழ்ச்சியான வாடிக்கையாளர்கள்",
+            clients_desc: "தென்னிந்தியா முழுவதும்"
+          },
+          home: {
+            departments: "சிறப்பு",
+            departments_italic: "துறைகள்.",
+            departments_desc: "நாங்கள் ஈடு இணையற்ற தொழில்நுட்ப நிபுணத்துவத்தை வழங்கும் எங்களது முக்கிய பகுதிகளை ஆராயுங்கள்.",
+            departments_gear: "தொழில்துறை கியர்",
+            departments_lighting: "ஸ்மார்ட் லைட்டிங்",
+            departments_safety: "பாதுகாப்பு அமைப்புகள்",
+            departments_cables: "உயர் மின்னழுத்த கேபிள்கள்",
+            view_all: "அனைத்து வகைகளையும் காண்க",
+            quality_title: "விட்டுக்கொடுக்காத",
+            quality_italic: "தரக் கட்டுப்பாடுகள்.",
+            quality_desc: "மின் அமைப்புகளில், பிழைகளுக்கு இடமில்லை என்பதை நாங்கள் புரிந்துகொள்கிறோம். அதனால்தான் மிக உயர்ந்த உலகளாவிய பாதுகாப்பு வரையறைகளை சந்திக்கும் கூறுகளில் மட்டுமே நாங்கள் வர்த்தகம் செய்கிறோம்.",
+            verify: "எங்கள் சான்றிதழ்களை சரிபார்க்கவும்",
+            discover_title: "எங்கள் முழு",
+            discover_italic: "பட்டியலைக் கண்டறியவும்.",
+            discover_desc: "எங்களது முழு அளவிலான உயர் செயல்திறன் கொண்ட மின் கூறுகள், கருவிகள் மற்றும் தொழில்துறை உபகரணங்களை ஆராயுங்கள்.",
+            trusted_by: "நிபுணர்களால் நம்பப்படுகிறது"
+          },
+          contact: {
+            title: "நிபுணர்களுடன்",
+            title_italic: "பேசுங்கள்.",
+            desc: "தனிப்பயன் தேவைகள்? தொழில்நுட்ப கேள்விகள்? எங்கள் பொறியாளர்கள் ஒரு செய்தி தூரத்தில் உள்ளனர்.",
+            helpline: "நேரடி உதவி எண்",
+            location: "எங்கள் இருப்பிடம்",
+            enquiry_title: "விசாரணையைச் சமர்ப்பிக்கவும்.",
+            label_name: "முழு பெயர்",
+            placeholder_name: "உங்கள் பெயரை உள்ளிடவும்",
+            label_phone: "தொலைபேசி",
+            label_message: "செய்தி",
+            placeholder_message: "இன்று நாங்கள் உங்களுக்கு எப்படி உதவ முடியும்?",
+            btn_send: "கோரிக்கையை அனுப்பு",
+            proprietor: "உரிமையாளர்"
+          },
+          footer: {
+            tagline: "உயர் செயல்திறன் கொண்ட மின்சார பொருட்கள்.",
+            cat_lighting: "மின் விளக்குகள்",
+            cat_switches: "சுவிட்சுகள்",
+            cat_industrial: "தொழில்துறை",
+            cat_appliances: "மின் சாதனங்கள்",
+            cat_wires: "மின் கம்பிகள்"
+          },
+          catalog: {
+            badge: "முழு சரக்கு",
+            title: "தயாரிப்பு",
+            title_italic: "பட்டியல்.",
+            search_placeholder: "உங்கள் பாகத்தைக் கண்டறியவும்...",
+            no_results: "பொருந்தும் கூறுகள் இல்லை.",
+            no_results_desc: "உங்கள் தேடலை விரிவுபடுத்த அல்லது வகைகளை மாற்ற முயற்சிக்கவும்.",
+            reset: "வடிப்பான்களை மீட்டமைக்கவும்"
+          },
+          product: {
+            specs: "தொழில்நுட்ப விவரக்குறிப்புகள்",
+            btn_cart: "சிஸ்டத்தில் சேர்க்கவும்",
+            btn_ar: "3D / AR இடத்தில் பார்க்கவும்",
+            authenticity: "உண்மைத்தன்மை",
+            mfg: "நேரடியாக உற்பத்தியாளரிடமிருந்து",
+            logistics: "தளவாடங்கள்",
+            shipping: "உலகளாவிய கப்பல்",
+            protection: "பாதுகாப்பு",
+            warranty: "முழு உத்தரவாதம்",
+            not_found: "பாகம் கண்டுபிடிக்கப்படவில்லை.",
+            return: "பட்டியலுக்குத் திரும்பு",
+            rating_label: "தொழில்முறை தரமான பாகம்",
+            flash_deal: "சிறப்பு தள்ளுபடி -20%",
+            description_fallback: "அதிகபட்ச மின் நிலைத்தன்மை மற்றும் ஆயுளுக்காக வடிவமைக்கப்பட்டுள்ளது. இந்த தொழில்துறை தர கூறு மேம்பட்ட வெப்பச் சிதறல் மற்றும் நம்பகமான மின் விநியோகத்திற்காக துல்லியமாக வடிவமைக்கப்பட்ட தொடர்பு அமைப்பைக் கொண்டுள்ளது."
+          },
+          cart: {
+            title: "உங்கள்",
+            title_italic: "தேர்வு.",
+            title_desc: "தளவாடங்களை முடிப்பதற்கு முன் உங்கள் பொருட்களைச் சரிபார்க்கவும்.",
+            empty: "சரக்கு காலியாக உள்ளது.",
+            empty_desc: "உங்கள் ஆர்டரில் இதுவரை எந்த மின் கூறுகளையும் நீங்கள் சேர்க்கவில்லை.",
+            btn_explore: "தயாரிப்புகளை ஆராயுங்கள்",
+            summary: "சுருக்கம்.",
+            subtotal: "துணை மொத்தம்",
+            delivery: "டெலிவரி",
+            free: "இலவசம்",
+            tax: "வரி (18%)",
+            total: "மொத்தம்",
+            btn_checkout: "ஆர்டரை முடிக்கவும்",
+            secure: "பாதுகாப்பான செக்அவுட் உத்தரவாதம்",
+            quantity: "அளவு"
+          },
+          auth: {
+            login_title: "மீண்டும் வருக.",
+            login_subtitle: "தொடர உங்கள் கணக்கில் உள்நுழையவும்.",
+            signup_title: "கணக்கை உருவாக்கவும்.",
+            signup_subtitle: "சிறந்த ஷாப்பிங் அனுபவத்திற்கு எங்களுடன் இணையுங்கள்.",
+            label_email: "மின்னஞ்சல் முகவரி",
+            label_password: "கடவுச்சொல்",
+            label_name: "முழு பெயர்",
+            btn_login: "உள்நுழைக",
+            btn_google: "கூகுள் மூலம் தொடரவும்",
+            btn_signup: "கணக்கை உருவாக்கு",
+            no_account: "கணக்கு இல்லையா?",
+            have_account: "ஏற்கனவே கணக்கு உள்ளதா?",
+            link_signup: "கணக்கை உருவாக்கவும்",
+            link_login: "கணக்கில் உள்நுழையவும்",
+            error_login: "உள்நுழைவு தோல்வியடைந்தது",
+            error_signup: "பதிவு தோல்வியடைந்தது",
+            verification_sent: "சரிபார்ப்பு மின்னஞ்சல் அனுப்பப்பட்டது. உங்கள் இன்பாக்ஸைச் சரிபார்க்கவும்.",
+            verify_email: "தொடர உங்கள் மின்னஞ்சலைச் சரிபார்க்கவும்."
+          },
+          orders: {
+            title: "எனது",
+            title_italic: "ஆர்டர்கள்.",
+            subtitle: "உங்கள் மின் கூறு ஏற்றுமதிகள் மற்றும் வரலாற்றைக் கண்காணிக்கவும்.",
+            empty_title: "இன்னும் ஆர்டர்கள் இல்லை.",
+            empty_desc: "நீங்கள் இன்னும் மின் கூறுகளுக்கு எந்த ஆர்டர்களையும் செய்யவில்லை.",
+            btn_start: "ஷாப்பிங் தொடங்கவும்",
+            label_id: "ஆர்டர் ஐடி",
+            label_date: "தேதி",
+            label_total: "மொத்த தொகை",
+            status_delivered: "டெலிவரி செய்யப்பட்டது",
+            status_transit: "வழியில் உள்ளது",
+            btn_received: "பெறப்பட்டதாகக் குறிக்கவும்"
+          },
+          seed: {
+            title: "Firestore தரவு ஏற்றம்.",
+            desc: "இது Firestore-இல் உள்ள தற்போதைய 'products' சேகரிப்பை நீக்கி, தொழில்துறை தர மின் கூறு பட்டியலைப் பதிவேற்றும்.",
+            btn_seed: "பொருட்கள் பட்டியலை ஏற்றவும்",
+            btn_loading: "பதிவேற்றப்படுகிறது...",
+            btn_success: "தரவு வெற்றிகரமாக பதிவேற்றப்பட்டது",
+            back: "பட்டியலுக்குத் திரும்பு"
+          },
+          checkout: {
+            title: "செக்அவுட்டை",
+            title_italic: "முடிக்கவும்.",
+            form_desc: "உங்கள் தளவாடங்கள் மற்றும் தொடர்பு விவரங்களை முடிக்கவும்.",
+            label_address: "விரிவான முகவரி",
+            placeholder_address: "தெரு, வீட்டு எண், அடையாளக்குறி...",
+            label_city: "நகரம்",
+            label_zip: "அஞ்சல் குறியீடு",
+            btn_confirm: "ஆர்டரை உறுதிப்படுத்தவும்",
+            success_title: "ஆர்டர் அனுப்பப்பட்டது.",
+            success_desc: "உங்கள் மின் கூறுகள் விரைவான டெலிவரிக்காகத் தயார் செய்யப்படுகின்றன. விரைவில் கண்காணிப்பு ஐடியைப் பெறுவீர்கள்.",
+            logistics_summary: "தளவாட சுருக்கம்",
+            priority_delivery: "முன்னுரிமை டெலிவரி: 2-3 நாட்கள்"
+          },
+          ar: {
+            loading: "3D இடத்தை தயார் செய்கிறது...",
+            exit: "3D காட்சியை வெளியேறவும்",
+            interactive: "ஊடாடும் 3D",
+            active: "AR பயன்முறை செயலில் உள்ளது",
+            interaction: "யதார்த்தமான 3D தொடர்பு",
+            pending_title: "3D மாதிரி தயாரிப்பில் உள்ளது",
+            pending_desc: "உயர்தர 3D பார்வைக்காக இந்த கூறுகளை நாங்கள் தற்போது டிஜிட்டல் மயமாக்குகிறோம். விரைவில் மீண்டும் சரிபார்க்கவும்.",
+            return: "பட்டியலுக்குத் திரும்பு",
+            powered_by: "வழங்குவது",
+            view_in_space: "உங்கள் இடத்தில் பார்க்கவும்",
+            mobile_required: "AR-க்கு மொபைல் சாதனம் பரிந்துரைக்கப்படுகிறது",
+            desktop_title: "மொபைலில் முயற்சிக்கவும்",
+            desktop_desc: "முழு AR தரை கண்டறிதல் மற்றும் யதார்த்தமான இடத்திற்கு உங்கள் தொலைபேசியில் இந்த தயாரிப்பை ஸ்கேன் செய்யவும்.",
+            controls: "வைப்பு",
+            scale: "அளவு",
+            rotate: "சுழற்சி",
+            capture: "காட்சியைப் பிடி",
+            reset: "மீட்டமை",
+            drag_hint: "மாதிரியை வைக்க இழுக்கவும்",
+            load_error: "மாதிரியை ஏற்ற முடியவில்லை",
+            load_error_desc: "3D கோப்பை ஏற்ற முடியவில்லை. பாதைகளை ஒத்திசைக்க 'பொருட்களை ஏற்றவும்' என்பதை கிளிக் செய்துள்ளீர்கள் என்பதை உறுதிப்படுத்தவும்.",
+            retry: "மீண்டும் முயற்சிக்கவும்"
+          }
+        }
+      }
+    }
+  });
+
+export default i18n;
